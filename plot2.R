@@ -21,5 +21,5 @@ subdata <- data[data$Date==date.range[1] | data$Date==date.range[2],]
 datetimes <- as.POSIXct(paste(subdata$Date, subdata$Time), format="%Y-%m-%d %H:%M:%S")
 
 png(file="plot2.png")
-plot(subdata$Global_active_power ~ times, col = 'black', main="Global Active Power", xlab = "Global Active Power (kilowatts)")
+plot(subdata$Global_active_power ~ datetimes, type='l', ylab = "Global Active Power (kilowatts)", xlab="")
 dev.off()
