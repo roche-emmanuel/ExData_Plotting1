@@ -23,7 +23,7 @@ datetimes <- as.POSIXct(paste(subdata$Date, subdata$Time), format="%Y-%m-%d %H:%
 png(file="plot4.png")
 
 # multi plot display:
-par(mfrow = c(2,2), mar = c(4,4,1,1))
+par(mfrow = c(2,2), mar = c(4,4,2,2))
 # plot 1
 plot(subdata$Global_active_power ~ datetimes, type='l', ylab = "Global Active Power", xlab="")
 
